@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Design_Patterns_Assignment.Strategy
 {
-    interface ISendMessage
+    internal interface ISendMessage
     {
         public IMessageSender Sender { get; set; }
 

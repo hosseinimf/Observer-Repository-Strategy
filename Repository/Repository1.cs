@@ -6,14 +6,21 @@ namespace Design_Patterns_Assignment
 {
     internal class Repository1
     {
-        internal static void Run()
+        public IDataRepository DataRepository { get; set; }
+
+        public Repository1()
+        {
+            DataRepository = new DataRepository();
+        }
+
+        internal void Run()
         {
             IDataRepository _repository = new DataRepository();
 
-            _repository.Load();
-            _repository.Save("Hossein");
-            _repository.Save("Webbutvecklare");
-            _repository.Load();
+            DataRepository.Load();
+            DataRepository.Save("Hossein");
+            DataRepository.Save("Webbutvecklare");
+            DataRepository.Load();
 
 
 

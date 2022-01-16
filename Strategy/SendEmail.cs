@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Design_Patterns_Assignment.Strategy
 {
-    class SendEmail : ISendEmail
+    internal class SendEmail : ISendEmail
     {
         public void Send(string message)
         {
-            Console.WriteLine($"Sent \"{message}\" as an email\n");
+            Console.WriteLine($" \"{message}\" is sent as an email\n");
         }
     }
 }

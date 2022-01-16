@@ -8,15 +8,15 @@ namespace Design_Patterns_Assignment.Repository
 {
     public class DataRepository : IDataRepository
     {
-        private readonly List<string> _stringList = new List<string>();
+        public IData DB = new Data();
        
 
         public void Load()
         {
             Console.WriteLine("\nLoading data ... ----------------");
-            if (_stringList.Count > 0)
+            if (DB.StringList.Count > 0)
             {
-                foreach (var item in _stringList)
+                foreach (var item in DB.StringList)
                 {
                     Console.WriteLine(item);
                 }
@@ -30,7 +30,7 @@ namespace Design_Patterns_Assignment.Repository
         public void Save(string data)
         {
             Console.WriteLine($"\nSaving data ... ({data})---------------");
-            _stringList.Add(data);
+            DB.StringList.Add(data);
             Console.WriteLine($"Data ({data}) is saved to the database.");
         }
 

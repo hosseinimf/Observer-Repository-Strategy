@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Design_Patterns_Assignment.Strategy
+namespace Design_Patterns_Assignment.Repository
 {
-    internal interface IMessageSender
+    public interface IData
     {
-        public void Send(string message);
+        List<string> StringList { get; set; }
     }
 }

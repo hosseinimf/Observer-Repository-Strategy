@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Design_Patterns_Assignment.Strategy
 {
-    public class SendSms : ISendSms
+    internal class SendSms : ISendSms
     {
         public void Send(string message)
         {
-            Console.WriteLine($"Sent \"{message}\" as a sms\n");
+            Console.WriteLine($" \"{message}\" is sent as a sms\n");
         }
     }
 }
